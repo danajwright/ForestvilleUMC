@@ -1,0 +1,35 @@
+<perch:before>
+<ul class="hfeed listing" id="anchor"></perch:before>
+    <li class="hentry">
+        <p class="entry-date"><perch:blog id="postDateTime" format="F jS, Y" /></p>
+        <h3 id="news<perch:content id="perch_item_index" type="hidden" />">
+        <h2><a href="<perch:blog id="postURL" />" rel="bookmark" class="entry-title"><perch:blog id="postTitle" /></a></h2></h3>
+        <perch:if exists="image"><img src="<perch:blog id="image" type="image" width="50" height="50" suppress="true" crop="true" />"/></perch:if>
+        <div class="author">
+            By <perch:blog id="author"/>
+        </div>
+        <div class="entry-summary">
+            <perch:blog id="excerpt" type="textarea" textile="true" />
+        </div>
+        <p class="readOn">
+            <a href="<perch:blog id="postURL" />">Read On →</a>
+        </p>
+    </li>
+<perch:after>
+    </ul>
+    <perch:if exists="paging">
+        <div class="paging">
+            <perch:if exists="not_first_page">
+            <div id="previousBox">
+                <a href="<perch:blog id="prev_url" encode="false" />">Previous</a>
+            </div>
+            </perch:if>
+            <p> Page <perch:blog id="current_page" /> of <perch:blog id="number_of_pages" />
+            <perch:if exists="not_last_page"> </p>
+            <div id="nextBox">
+                <a href="<perch:blog id="next_url" encode="false" />"> Next</a>
+            </div>
+            </perch:if>
+        </div>
+    </perch:if>
+</perch:after>

@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+
+<head>
+<meta charset="UTF-8">
+<title>Forestville United Methodist Church</title>
+<meta name="viewport" content="width=device-width">
+<link href="css/main.css" rel="stylesheet" media="screen, projection">
+</head>
+
+<body>
+
+
+<div id="superHeader" role="banner">
+		<p>Follow Forestville UMC by <a href="#">RSS</a>, or <a href="#">EMAIL</a></p>
+</div>
+
+<div id="headerNav">
+<div id="mainNav" class="cf" role"navigation">
+	<nav id="navContainer">
+		<ul class=topMenu>
+			<li>
+				<h3><a href="#">Home</a></h3>
+			</li>
+			<li>
+				<h3><a href="#">About Us</a></h3>
+			</li>
+			<li>
+				<h3><a href="#">The Grapevine</a></h3>
+			</li>
+			<li>
+				<h3><a href="#">Church Services</a></h3>
+			</li>
+			<li>
+				<h3><a href="#">Give</a></li></h3>
+			</li>
+		</ul>
+	</nav>
+</div>
+
+<header id="mainHeader"	role="banner">
+	<img src="img/fumc.png">
+	<h1><a href="#">Forestville United Methodist Church</a></h1>
+</header>
+</div>
+
+<!--CONTENT FOR DIFFERENT PAGES BEGINS HERE--> 
+
+<div id="mainBannerAbout" role="banner">
+	<div id="boxContainer">
+		<div id="box1About">
+			<h1>About Forestville UMC</h1>
+			<ul>
+				<li><a href="#"><span>&#10013;</span>Our Mission</a></li>
+				<li><a href="#"><span>&#10013;</span>Church History</a></li>
+				<li><a href="#"><span>&#10013;</span>Pastor Rochelle</a></li>
+				<li><a href="#"><span>&#10013;</span>Ministries</a></li>
+			</ul>	
+		</div>
+	</div>	
+</div>
+
+<section id="content" role="main">
+	<article id="welcome">
+		<h1>Welcome</h1>
+		<p>Welcome and thank you for visiting our new website. Please feel free to contact us for any additional information. Forestville United Methodist Church is open to all and actively responds to the needs of people in the west Sonoma County. We invite you to explore making Forestville your spiritual home.</p>
+		<h1>Worship Services</h1>
+		<p>Services are held in the main Church: Sunday Morning services are at 8:30 AM and 10:30 AM.Any additional services will be announced on our notice board and on our website.
+	</article>
+	<article id="map">
+		<h1>Find Us<h1>
+		<img src="img/map.png">
+	</article>	
+</section>
+
+<!--CONTENT FOR DIFFERENT PAGES IS ENDS HERE--> 
+
+
+<footer id="mainFooter" role="banner">
+	<div id="footerContainer">
+		<div id="contactFollow">
+			<h1>Contact Us</h1>
+			<ul>
+				<li>Forestville United Methodist Church</li>
+				<li>6550 Covey Road Forestville, CA 95436</li>
+				<li>Office Hours Mon-Fri 8 a.m. – Noon</li> 
+				<li>(707) 887-2020</li> 
+				<li>forestvilleumc@att.net</li>
+			</ul>
+			<h1>Follow Us</h1>
+			<a href="https://twitter.com/ForestvilleUMC" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @ForestvilleUMC</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			<iframe src="http://www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2FForestvilleUnitedMethodistChurch&amp;layout=button_count&amp;show_faces=false&amp;colorscheme=light&amp;font=arial&amp;width=450&amp;appId=518983021479578" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px;" allowTransparency="true"></iframe>
+		</div>		
+		<div id="calendarList">
+			<h1>Upcoming Events</h1>
+			<ul>
+				<li>June 1st 8:00am Parade Pancake Breakfast and parade after</li>
+				<li>June 16th Father’s Day</li>
+				<li>June 18th Parsonage Gardening</li>
+				<li>June 30th 5th Sunday Brunch</li>
+				<li>More Events</li>
+			</ul>	
+		</div>
+		<div id="newsletter">
+			<h1>Newsletter</h1>
+			<input type="text" name="enter email address"/><br>
+			<button type="button">Sign Up</button>
+		</div>	
+	</div>
+		<footer id="superFooter" role="banner">
+			<p>© 2013 Forestville United Methodist Church. All rights reserved. Site development by <a href="#">Dana J. Wright</a></p>
+		</footer>
+</footer>
+
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+<script>
+//variable to hold current window state - small, medium or large
+var sindowState = 'large';
+
+//check initial width of the screen and respond with appropriate menu
+$(document).ready(function(){
+	var sw = document.body.clientWidth;
+	if (sw < 481) {
+		smMenu();
+	} else if (sw >= 481 && sw <= 768){
+		medMenu();
+	} else {
+		lgMenu();
+	}
+});
+
+
+//take care of resizing the window
+
+$(window).resize(function){
+	var sw=document.body.clientWidth;
+	if(sw < 481 && windowState !='small'){
+		smMenu();
+	}
+	if(sw > 481 && sw < 769 && windowState != 'medium'){
+		medMenu();
+	}
+	if (sw > 768 && windowState != 'large') {
+		lgMenu();
+	}
+
+});
+
+//handle menus for small screen
+function smMenu(){
+	//create the menu toggle
+    $('.topMenu').before('<div class="menuToggle"><a href="#">menu<span class="indicator">+</span></a></div>');
+    // append the + indicator
+    $('.topMenu h3').append('<span class="indicator">+</span>');
+
+    // wire up clicks and changing the various menu states
+	//we'll use clicks instead of touch in case a smaller screen has a pointer device
+	//first, let's deal with the menu toggle
+	$('.menuToggle a').click(function() {
+		//expand the menu
+		$('.topMenu').toggleClass('expand');
+		// figure out whether the indicator should be changed to + or -
+		var newValue = $(this).find('span.indicator').text() == '+' ? '-' : '+';
+		// set the new value of the indicator
+		$(this).find('span.indicator').text(newValue);
+});
+//indicate current window state
+windowState = 'small';
+}
+//handle menu for medium screen sizes
+function medMenu() {
+	
+}
+
+//handle menu for large screens
+function lgMenu() {
+	
+}
+
+//handle menu for medium screen
+function medMenu(){
+
+
+}
+
+//handle menu for large screen
+function lgMenu(){
+
+
+}
+
+
+
+</script>
+</body>
+
+</html>
