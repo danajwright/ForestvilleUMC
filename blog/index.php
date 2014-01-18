@@ -22,7 +22,7 @@
 			<h1>The FUMC Grapevine</h1>
 			<ul>
 				<li><a href="http://forestvilleumc.org/blog/post.php?s=2013-12-29-download-the-latest-issue-of-the-grapevine-in-pdf-format#anchor"><span>&#10013;</span>The Grapevine in PDF</a></li>
-				<li><a href="http://forestvilleumc.org/blog/post.php?s=2013-05-01-worship-schedule-for-may-2013#anchor"><span>&#10013;</span>Worship Schedule</a></li>
+				<li><a href="http://forestvilleumc.org/blog/post.php?s=pid43#anchor"><span>&#10013;</span>Worship Schedule</a></li>
 				<li><a href="http://forestvilleumc.org/blog/archive.php?cat=pastors-corner#anchor"><span>&#10013;</span>Pastor's Corner</a></li>
 			</ul>
 		</div>
